@@ -46,6 +46,7 @@ fn setup_integration(
     vault_client.set_authorized_contract(&stream_id);
     stream_client.set_vault(&vault_id);
     stream_client.set_withdrawal_cooldown(&0u64); // disable cooldown in tests
+    stream_client.set_min_cancel_notice(&0u32);
 
     token_client.mint(&depositor, &10_000);
     vault_client.deposit(&depositor, &token_id, &10_000);

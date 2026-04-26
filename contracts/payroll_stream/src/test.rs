@@ -122,6 +122,7 @@ pub(crate) fn setup(env: &Env) -> (PayrollStreamClient, Address, Address, Addres
     client.set_vault(&vault_id);
     client.set_withdrawal_cooldown(&0u64);
     client.set_min_stream_duration(&0u64);
+    client.set_min_cancel_notice(&0u32);
     (client, employer, worker, token, admin)
 }
 

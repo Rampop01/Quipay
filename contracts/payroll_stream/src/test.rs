@@ -3039,7 +3039,7 @@ fn test_extend_stream_min_duration_enforced() {
     client.set_min_stream_duration(&10000u64);
 
     // Create a 11000s stream (duration is 11100-100 = 11000)
-    let stream_id = client.create_stream(
+    let _stream_id = client.create_stream(
         &employer, &worker, &token, &100, &100, &100, &11100, &None, &None,
     );
 

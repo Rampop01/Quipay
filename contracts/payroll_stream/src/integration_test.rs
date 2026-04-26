@@ -106,7 +106,7 @@ fn test_integration_token_transfer_on_withdrawal() {
     let env = Env::default();
     env.mock_all_auths_allowing_non_root_auth();
 
-    let (stream_client, vault_client, _admin, employer, worker, token_id, _depositor) =
+    let (stream_client, _vault_client, _admin, employer, worker, token_id, _depositor) =
         setup_integration(&env);
     let token_client = token::Client::new(&env, &token_id);
 
